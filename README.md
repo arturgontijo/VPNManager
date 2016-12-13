@@ -16,3 +16,8 @@ Better way to user NordVPN and others VPNs (paid or free).
 
 ![alt tag](https://raw.githubusercontent.com/arturgontijo/VPNManager/master/screeshots/screenshot_01.png)
 
+
+Developers:
+
+1 - Created and built with qtcreator (Qt5) on Ubuntu 16.10
+
