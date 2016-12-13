@@ -237,6 +237,7 @@ void VPNManager::on_btConnect_clicked()
             else
             {
                 ui->textStatus->setText("Wait, connecting...");
+                execThread->Stop = false;
                 execThread->start();
             }
         }
