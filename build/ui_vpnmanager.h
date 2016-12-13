@@ -53,6 +53,11 @@ public:
         if (VPNManager->objectName().isEmpty())
             VPNManager->setObjectName(QStringLiteral("VPNManager"));
         VPNManager->resize(562, 507);
+        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(VPNManager->sizePolicy().hasHeightForWidth());
+        VPNManager->setSizePolicy(sizePolicy);
         centralWidget = new QWidget(VPNManager);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         btServers = new QPushButton(centralWidget);

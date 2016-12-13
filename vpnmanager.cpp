@@ -36,6 +36,9 @@ VPNManager::VPNManager(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    // Set fix size form
+    this->setFixedSize(562,507);
+
     // Create ExecuteThread Instance
     execThread = new ExecuteThread(this);
 
