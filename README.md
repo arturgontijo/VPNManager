@@ -12,7 +12,7 @@ A better way to use NordVPN and others VPNs (paid|free).
 - With only .ovpn is possible to get connected (just select the .ovpn from the first list of files and leave the others unselected).
 
 
-![alt tag](https://raw.githubusercontent.com/arturgontijo/VPNManager/master/screeshots/screenshot_01.png)
+![alt tag](https://raw.githubusercontent.com/arturgontijo/VPNManager/master/screenshots/screenshot_01.png)
 
 
 Developers:
