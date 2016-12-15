@@ -19,18 +19,29 @@ void ExecuteThread::run()
 
     QProcess process;
     process.start(cmd);
-    process.waitForReadyRead();
+    flag_thread = 1;
     pid = process.processId();
     process.waitForReadyRead();
+    log_output += process.readLine();
 
-    this->msleep(3000);
-    flag_thread = 1;
-
+    this->msleep(1000);
     // Emit first signal to update status
     emit createThread();
 
     while(flag_thread == 1)
     {
+        while(process.waitForReadyRead())
+        {
+            if(this->Stop) break;
+            log_output += process.readLine();
+            emit createThread();
+            while(log_output != "")
+            {
+                if(this->Stop) break;
+                this->msleep(250);
+            }
+        }
+
         if(this->Stop)
         {
             process.kill();

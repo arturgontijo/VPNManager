@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_VPNManager_t {
-    QByteArrayData data[13];
-    char stringdata0[213];
+    QByteArrayData data[14];
+    char stringdata0[232];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -41,7 +41,8 @@ QT_MOC_LITERAL(8, 121, 15), // "on_btCA_clicked"
 QT_MOC_LITERAL(9, 137, 17), // "on_listCA_clicked"
 QT_MOC_LITERAL(10, 155, 23), // "on_btDisconnect_clicked"
 QT_MOC_LITERAL(11, 179, 18), // "on_btClose_clicked"
-QT_MOC_LITERAL(12, 198, 14) // "onCreateThread"
+QT_MOC_LITERAL(12, 198, 18), // "on_btClear_clicked"
+QT_MOC_LITERAL(13, 217, 14) // "onCreateThread"
 
     },
     "VPNManager\0on_btServers_clicked\0\0"
@@ -49,7 +50,8 @@ QT_MOC_LITERAL(12, 198, 14) // "onCreateThread"
     "index\0on_listKeys_clicked\0"
     "on_btConnect_clicked\0on_btCA_clicked\0"
     "on_listCA_clicked\0on_btDisconnect_clicked\0"
-    "on_btClose_clicked\0onCreateThread"
+    "on_btClose_clicked\0on_btClear_clicked\0"
+    "onCreateThread"
 };
 #undef QT_MOC_LITERAL
 
@@ -59,7 +61,7 @@ static const uint qt_meta_data_VPNManager[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      10,   14, // methods
+      11,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -67,16 +69,17 @@ static const uint qt_meta_data_VPNManager[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   64,    2, 0x08 /* Private */,
-       3,    0,   65,    2, 0x08 /* Private */,
-       4,    1,   66,    2, 0x08 /* Private */,
-       6,    1,   69,    2, 0x08 /* Private */,
-       7,    0,   72,    2, 0x08 /* Private */,
-       8,    0,   73,    2, 0x08 /* Private */,
-       9,    1,   74,    2, 0x08 /* Private */,
-      10,    0,   77,    2, 0x08 /* Private */,
-      11,    0,   78,    2, 0x08 /* Private */,
-      12,    0,   79,    2, 0x0a /* Public */,
+       1,    0,   69,    2, 0x08 /* Private */,
+       3,    0,   70,    2, 0x08 /* Private */,
+       4,    1,   71,    2, 0x08 /* Private */,
+       6,    1,   74,    2, 0x08 /* Private */,
+       7,    0,   77,    2, 0x08 /* Private */,
+       8,    0,   78,    2, 0x08 /* Private */,
+       9,    1,   79,    2, 0x08 /* Private */,
+      10,    0,   82,    2, 0x08 /* Private */,
+      11,    0,   83,    2, 0x08 /* Private */,
+      12,    0,   84,    2, 0x08 /* Private */,
+      13,    0,   85,    2, 0x0a /* Public */,
 
  // slots: parameters
     QMetaType::Void,
@@ -86,6 +89,7 @@ static const uint qt_meta_data_VPNManager[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void, QMetaType::QModelIndex,    5,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -108,7 +112,8 @@ void VPNManager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 6: _t->on_listCA_clicked((*reinterpret_cast< const QModelIndex(*)>(_a[1]))); break;
         case 7: _t->on_btDisconnect_clicked(); break;
         case 8: _t->on_btClose_clicked(); break;
-        case 9: _t->onCreateThread(); break;
+        case 9: _t->on_btClear_clicked(); break;
+        case 10: _t->onCreateThread(); break;
         default: ;
         }
     }
@@ -139,13 +144,13 @@ int VPNManager::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 10)
+        if (_id < 11)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 10;
+        _id -= 11;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 10)
+        if (_id < 11)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 10;
+        _id -= 11;
     }
     return _id;
 }

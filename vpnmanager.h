@@ -9,8 +9,10 @@ extern QString keys_folder;
 extern QString ca_folder;
 
 extern QString servers_file;
-extern QString keys_file ;
-extern QString ca_file ;
+extern QString keys_file;
+extern QString ca_file;
+
+extern QString log_output;
 
 extern QString username ;
 extern QString password ;
@@ -52,6 +54,8 @@ private slots:
     void on_btDisconnect_clicked();
 
     void on_btClose_clicked();
+
+    void on_btClear_clicked();
 
 public slots:
 

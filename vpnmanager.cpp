@@ -22,6 +22,8 @@ QString servers_file = "";
 QString keys_file = "";
 QString ca_file = "";
 
+QString log_output = "";
+
 QString username = "";
 QString password = "";
 
@@ -37,7 +39,7 @@ VPNManager::VPNManager(QWidget *parent) :
     ui->setupUi(this);
 
     // Set fix size form
-    this->setFixedSize(562,507);
+    this->setFixedSize(574,588);
 
     // Create ExecuteThread Instance
     execThread = new ExecuteThread(this);
@@ -56,10 +58,18 @@ void VPNManager::onCreateThread()
 {
     if(flag_thread == 1 && pid > 0)
     {
-        ui->textStatus->setText("Connected!");
-        ui->textPID->setText(QString::number(pid));
-        credentials = servers_folder + "Credentials.txt";
-        QFile::remove(credentials);
+        if(log_output != "")
+        {
+            ui->textLOG->setText(ui->textLOG->toPlainText() + log_output);
+            log_output = "";
+        }
+        else
+        {
+            ui->textStatus->setText("Connected!");
+            ui->textPID->setText(QString::number(pid));
+            credentials = servers_folder + "Credentials.txt";
+            QFile::remove(credentials);
+        }
     }
     else
     {
@@ -263,6 +273,7 @@ void VPNManager::on_btDisconnect_clicked()
     flag_thread = 0;
     pid = -1;
     ui->textStatus->setText("Not Connected!");
+    ui->textLOG->setText("");
 }
 
 void VPNManager::on_btClose_clicked()
@@ -291,3 +302,8 @@ void VPNManager::on_btClose_clicked()
 
 
 
+
+void VPNManager::on_btClear_clicked()
+{
+    ui->textLOG->setText("");
+}
